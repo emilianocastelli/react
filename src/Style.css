@@ -1,0 +1,40 @@
+/***** Home *****/
+.navBarHeader{
+    height: 60px;
+    background-color: #2175bc;
+    line-height: 30px;
+}
+.navBar li{
+    display:block;
+    float:left;
+    padding:0 10px;
+    text-align: center;
+}
+.navBar li a {
+    font-family: Arial;
+    font-size: 11px;
+    text-decoration: none;
+    float: left;
+    padding: 10px;
+    color: #fff;
+}
+
+.navBar li a:hover {
+    background-color: #2586d7;
+    padding-bottom: 12px;
+}
+
+.iconCart{
+    width: 40px;
+    height: 30px;
+    margin-top: 12px;
+    margin-left: 50px;
+}
+
+.count{
+    display: flex;
+    flex-direction: row;
+    margin-left: 37%;
+    margin-top: 10%;
+}
+
