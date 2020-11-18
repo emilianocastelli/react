@@ -1,7 +1,18 @@
-import React, {useState} from "react";
+import React, {useEffect, useState} from "react";
 import Item from "./Item";
 
 const ItemList = () => {
+    useEffect(() =>{
+        const getPokemon = fetch("https://pokeapi.co/api/v2/pokemon/ditto");
+
+        getPokemon.then((response) => {
+            const data = response.json();
+            return data;
+        }).then((data) =>{
+            let pokemon = data.results;
+        })
+
+    }, [])
 
     const [products, setProducts] = useState([]);
 

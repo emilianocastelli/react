@@ -3,6 +3,7 @@ import './Style.css';
 import NavBar from "./components/NavBar";
 import Home from "./components/Home";
 import ItemList from "./components/ItemList";
+import ItemDetailContainer from "./components/ItemDetailContainer";
 
 function App() {
     let home = "Home";
@@ -20,7 +21,10 @@ function App() {
             <NavBar home={home} noticias={noticias} multimedia={multimedia} nosotros={nosotros} contacto={contacto}/>
         </header>
         <Home greeting={greeting}/>
+        Lista de Productos
         <ItemList/>
+        Producto Individual
+        <ItemDetailContainer />
     </div>
     );
 }
