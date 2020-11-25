@@ -1,18 +1,22 @@
 import React, {useState} from "react";
 import ItemDetail from "./ItemDetail";
+import {useParams} from "react-router-dom";
+import {data} from "../data";
 
 const ItemDetailContainer = () => {
-
+    const {id} = useParams();
     const [product, setProduct] = useState(null);
     const [loading, setLoading] = useState(true);
 
     const getProduct = new Promise((res, rej) => {
-        const product = {
-            id: "1",
-            name: "Tito Bessone",
-            categoria: "TC",
-            marca: "Dodge"
-        };
+        let product = {};
+
+
+        data.forEach((p)=>{
+            if(p.id === id){
+               product = p;
+            }
+        });
 
         setTimeout(() => {
             res(product)
@@ -32,9 +36,7 @@ const ItemDetailContainer = () => {
     return (
         <div className={"text-center mt-5"}>
             <ItemDetail producto={product}/>
-            <div>
-                <button type="button" className={"btn btn-primary btn-sm comprar"}>Comprar</button>
-            </div>
+
         </div>
     );
 }

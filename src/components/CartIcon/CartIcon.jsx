@@ -1,8 +1,12 @@
 import React  from "react";
+import { Link} from "react-router-dom";
 
 const CartIcon = () => {
     return(
-        <a href=""><img src="./images/carritoIcon.png" alt="" className={"iconCart"} /></a>
+        <Link to={"/cart"}>
+            <img src="/images/carritoIcon.png" alt="" className={"iconCart"} />
+        </Link>
+
     );
 
 }
