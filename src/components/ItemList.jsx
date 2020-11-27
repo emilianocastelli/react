@@ -20,12 +20,15 @@ const ItemList = () => {
     }));
 
     return (
-        <div className={"listProducts text-center mt-5"}>
-            {
-                products.map((product) => (
-                    <Item name={product.name} marca={product.marca} id={product.id} />
-                ))
-            }
+        <div className={"card-deck container text-center mt-5"}>
+            <div className="row">
+                {
+                    products.map((product) => (
+                        <Item name={product.name} marca={product.marca} image={product.image} id={product.id} />
+                    ))
+                }
+            </div>
+
         </div>
     );
 }

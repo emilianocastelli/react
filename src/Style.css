@@ -33,11 +33,19 @@
 
 .count{
     display: flex;
-    flex-direction: row;
-    margin-left: 30%;
-    margin-top: 10%;
-}
-.comprar{
-    display: inline-block;
+    flex-direction: column;
+    padding-left: 45%;
+    padding-right: 45%;
 }
 
+
+a, a:hover{
+    text-decoration:none;
+    cursor: pointer;
+}
+.card-deck h5, h5:hover{
+    color: #747474;
+}
+.comprar{
+    padding: 10px 30px 10px 30px;
+}
