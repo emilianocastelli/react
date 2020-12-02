@@ -6,6 +6,7 @@ import Home from "./components/Home";
 import ItemList from "./components/ItemList";
 import ItemDetailContainer from "./components/ItemDetailContainer";
 import CartContainers from "./components/Containers/CartContainers";
+import CartContext from "./context/CartContext";
 
 function App() {
     let home = "Home";
@@ -13,20 +14,21 @@ function App() {
     let greeting = "Replicas de Autos Historicos";
 
     return (
-    <div className="App">
-        <BrowserRouter>
-            <header className="App-header">
-                <NavBar home={home} items={items}/>
-            </header>
-            <Switch>
-                <Route path="/item/:id" component={ItemDetailContainer}/>
-                <Route path="/cart" component={CartContainers}/>
-                <Route path="/items" render={()=> <ItemList/>}/>
-                <Route exact path={"/"} render={() => <Home greeting={greeting}/>}/>
-            </Switch>
-        </BrowserRouter>
-
-    </div>
+        <div className="App">
+            <BrowserRouter>
+                <CartContext.Provider value={[]}>
+                    <header className="App-header">
+                        <NavBar home={home} items={items}/>
+                    </header>
+                    <Switch>
+                        <Route path="/item/:id" component={ItemDetailContainer}/>
+                        <Route path="/cart" component={CartContainers}/>
+                        <Route path="/items" render={()=> <ItemList/>}/>
+                        <Route exact path={"/"} render={() => <Home greeting={greeting}/>}/>
+                    </Switch>
+                </CartContext.Provider>
+            </BrowserRouter>
+        </div>
     );
 }
 
