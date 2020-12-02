@@ -16,7 +16,7 @@ function App() {
     return (
         <div className="App">
             <BrowserRouter>
-                <CartContext.Provider value={[]}>
+                <CartContext defaultValue={[]}>
                     <header className="App-header">
                         <NavBar home={home} items={items}/>
                     </header>
@@ -26,7 +26,7 @@ function App() {
                         <Route path="/items" render={()=> <ItemList/>}/>
                         <Route exact path={"/"} render={() => <Home greeting={greeting}/>}/>
                     </Switch>
-                </CartContext.Provider>
+                </CartContext>
             </BrowserRouter>
         </div>
     );

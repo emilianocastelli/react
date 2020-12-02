@@ -1,13 +1,17 @@
 import React, { useContext } from "react";
 import { Link } from "react-router-dom";
-import CartContext from "../../context/CartContext";
+import { Cart } from "../../context/CartContext";
 
 const CartIcon = () => {
-    const carrito = useContext(CartContext);
+    const carrito = useContext(Cart);
+    console.log(carrito);
+
     return(
         <Link to={"/cart"} style={{color:'white'}}>
-            {carrito.length}
-            <img src="/images/carritoIcon.png" alt="" className={"iconCart"} />
+            <div className={"iconCart"}>
+                <p className={"cantidadCart"}>{carrito.cartSize}</p>
+                <img src="/images/carritoIcon.png" alt="" />
+            </div>
         </Link>
 
     );

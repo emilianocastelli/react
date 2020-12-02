@@ -36,7 +36,6 @@ const ItemDetailContainer = () => {
     return (
         <div className={"text-center mt-5"}>
             <ItemDetail producto={product}/>
-
         </div>
     );
 }

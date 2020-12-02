@@ -1,5 +1,24 @@
-import React from "react";
+import React, {useState} from "react";
 
-const CartContext = React.createContext([]);
+export const Cart = React.createContext({});
 
-export default CartContext;
+export default function CartContext({defaultValue = [], children}){
+
+    const [cart, setCart] = useState(defaultValue);
+
+    function addToCart(item){
+        setCart([...cart, item])
+    }
+
+    function cartSize(){
+        let suma = 0;
+        cart.forEach(prod=>{
+            suma += prod.cantidad;
+        })
+        return suma;
+    }
+
+    return <Cart.Provider value={{cart: cart, cartSize: cartSize(), addToCart: addToCart}}>
+        {children}
+    </Cart.Provider>
+};

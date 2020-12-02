@@ -25,10 +25,19 @@
 }
 
 .iconCart{
+    margin-left: 63%;
+    position: relative;
+    text-align: center;
+    padding-top: 10px;
+}
+.iconCart p{
+    display: inline-block;
+    padding-right: 10px;
+}
+.iconCart img{
     width: 40px;
     height: 30px;
-    margin-top: 12px;
-    margin-left: 63%;
+    margin-left: 10px;
 }
 
 .count{
@@ -49,3 +58,4 @@ a, a:hover{
 .comprar{
     padding: 10px 30px 10px 30px;
 }
+
