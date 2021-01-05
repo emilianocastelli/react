@@ -5,7 +5,8 @@ export const data = [
         categoria: "TC",
         marca: "Dodge",
         descripcion: "Auto Campeón Temporada 2003",
-        image: "/images/titododge2003.jpg"
+        image: "/images/titododge2003.jpg",
+        price: "$1000"
     },
     {
         id: "2",
@@ -13,7 +14,8 @@ export const data = [
         categoria: "TC",
         marca: "Chevrolet",
         descripcion: "Auto Campeón Temporada 2001",
-        image: "/images/ortelli.jpg"
+        image: "/images/ortelli.jpg",
+        price: "$950"
     },
     {
         id: "3",
@@ -21,22 +23,25 @@ export const data = [
         categoria: "TC",
         marca: "Chevrolet",
         descripcion: "Auto Campeón Temporada 1997",
-        image: "/images/traverso.jpg"
+        image: "/images/traverso.jpg",
+        price: "$1000"
     },
     {
         id: "4",
         name: "Marcos Di Palma",
         categoria: "TC",
         marca: "Chevrolet",
-        descripcion: "Auto Emblematico Temporada 20030",
-        image: "/images/marcos.jpg"
+        descripcion: "Auto Emblematico Temporada 2000",
+        image: "/images/marcos.jpg",
+        price: "$850"
     },
     {
         id: "5",
         name: "Omar Martinez",
-        categoria: "TC 2000",
+        categoria: "TC",
         marca: "Ford",
         descripcion: "Auto Campeón Temporada 2004",
-        image: "/images/guri.jpg"
+        image: "/images/guri.jpg",
+        price: "$900"
     }
 ];

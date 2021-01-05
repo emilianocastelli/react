@@ -1,8 +1,12 @@
 /***** Home *****/
+header{
+    background-color: #EEF0ED;
+    padding: 10px;
+}
 .navBarHeader{
-    height: 60px;
-    background-color: #2175bc;
-    line-height: 30px;
+    background-color: #ffffff;
+    border-radius: 2px;
+    margin: 2% 5% 2% 5%;
 }
 .navBar li{
     display:block;
@@ -12,20 +16,22 @@
 }
 .navBar li a {
     font-family: Arial;
-    font-size: 11px;
+    font-size: 15px;
     text-decoration: none;
     float: left;
     padding: 10px;
-    color: #fff;
+    color: #747474;
+    font-weight: bold;
 }
 
-.navBar li a:hover {
-    background-color: #2586d7;
-    padding-bottom: 12px;
+*, *::before, *::after {
+    box-sizing: border-box;
+    color: #747474;
 }
+
 
 .iconCart{
-    margin-left: 63%;
+    margin-left: 70%;
     position: relative;
     text-align: center;
     padding-top: 10px;
@@ -37,14 +43,11 @@
 .iconCart img{
     width: 40px;
     height: 30px;
-    margin-left: 10px;
+    margin-left: 5px;
 }
 
-.count{
-    display: flex;
-    flex-direction: column;
-    padding-left: 45%;
-    padding-right: 45%;
+.btn-product-select{
+    width: 50px;
 }
 
 
@@ -58,4 +61,7 @@ a, a:hover{
 .comprar{
     padding: 10px 30px 10px 30px;
 }
+ .card-body{
+     min-height: 220px;
+ }
 

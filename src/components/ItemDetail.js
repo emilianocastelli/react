@@ -2,6 +2,7 @@ import CountContainer from "../components/Containers/CountContainer";
 import React, {useContext, useState} from "react";
 import { Cart } from "../context/CartContext";
 
+
 const ItemDetail = (props) => {
 
     const carrito = useContext(Cart);
@@ -12,8 +13,8 @@ const ItemDetail = (props) => {
     }
 
     return (
-        <div className={"row text-center"}>
-            <div className={"col-8 offset-2"}>
+        <div className={"row text-center m-0"}>
+            <div className={"col-10"}>
                 <div className={"container"}>
                     <img src={props.producto.image} className={"w-100"} alt=""/>
                     <div className={"card-body"}>
@@ -31,11 +32,12 @@ const ItemDetail = (props) => {
                                             name: props.producto.name,
                                             marca: props.producto.marca,
                                             image: props.producto.image,
-                                            cantidad: cantidad
+                                            cantidad: cantidad,
+                                            price: props.producto.price
                                         });
                                     }}>
                                         Comprar {cantidad}
-                                </button>
+                                </button> <br/>
                             </div>
                         </div>
                     </div>

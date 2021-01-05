@@ -7,11 +7,11 @@ const NavBar = (props) =>{
     return(
         <div className={"navBarHeader"}>
             <ul className={"navBar"}>
-                <li>
+                <li className={"text-uppercase"}>
                     <Link to={"/"}>{props.home}</Link>
                 </li>
 
-                <li>
+                <li className={"text-uppercase"}>
                     <Link to={"/items"}>{props.items}</Link>
                 </li>
             </ul>

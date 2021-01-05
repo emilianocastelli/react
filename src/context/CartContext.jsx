@@ -18,7 +18,11 @@ export default function CartContext({defaultValue = [], children}){
         return suma;
     }
 
-    return <Cart.Provider value={{cart: cart, cartSize: cartSize(), addToCart: addToCart}}>
+    function vaciarCarrito(){
+        setCart([]);
+    }
+
+    return <Cart.Provider value={{cart: cart, cartSize: cartSize(), addToCart: addToCart, vaciarCarrito: vaciarCarrito}}>
         {children}
     </Cart.Provider>
 };

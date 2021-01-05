@@ -1,35 +1,29 @@
 import React, {useState} from "react";
+import * as firebase from "firebase/app";
+import "firebase/firestore";
 import ItemDetail from "./ItemDetail";
 import {useParams} from "react-router-dom";
-import {data} from "../data";
+import {getFirestore} from "../firebase";
 
 const ItemDetailContainer = () => {
     const {id} = useParams();
     const [product, setProduct] = useState(null);
     const [loading, setLoading] = useState(true);
+    const db = getFirestore();
+    const itemColeetion = db.collection("maquetas");
+    const item = itemColeetion.doc(id);
 
-    const getProduct = new Promise((res, rej) => {
-        let product = {};
-
-
-        data.forEach((p)=>{
-            if(p.id === id){
-               product = p;
-            }
-        });
-
-        setTimeout(() => {
-            res(product)
-        }, 3000);
-    });
-
-    getProduct.then((response) => {
-        setProduct(response);
+    item.get().then((doc) =>{
+        if(!doc.exists){
+            console.log("Items does not exist");
+            return;
+        }
+        setProduct({id:doc.id, ...doc.data()});
+    }).catch((error =>{
+        console.log("Error searching Items", error);
+    })).finally(()=>{
         setLoading(false);
-    }).catch((err => {
-        console.log(err);
-    }));
-
+    }, []);
 
     if(loading) return (<div>Cargando Producto...</div>);
 

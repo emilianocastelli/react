@@ -1,6 +1,7 @@
 import React, { useContext } from "react";
 import { Link } from "react-router-dom";
 import { Cart } from "../../context/CartContext";
+import ShoppingCartIcon from '@material-ui/icons/ShoppingCart';
 
 const CartIcon = () => {
     const carrito = useContext(Cart);
@@ -10,7 +11,7 @@ const CartIcon = () => {
         <Link to={"/cart"} style={{color:'white'}}>
             <div className={"iconCart"}>
                 <p className={"cantidadCart"}>{carrito.cartSize}</p>
-                <img src="/images/carritoIcon.png" alt="" />
+                <ShoppingCartIcon/>
             </div>
         </Link>
 
