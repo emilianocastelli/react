@@ -1,8 +1,18 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+#Proyecto Coderhouse
+Este proyecto fue realizado durante el curso de Coderhouse espcializado en React.
 
-## Available Scripts
+## Objetivos del proyecto:
+- Aprender React.
+- Reforzar conocimientos previos.
+- Incorporar nuevas herramientas.
+- Sumar experiencia.
 
-In the project directory, you can run:
+### Resumen del proyecto:
+La app que estuve desarrollando es en base a una simulación de venta de autos historicos de automovilismo.
+En la misma se pueden cargar productos (mediante firebase) en los cuales se pueden detallar diferentes descripciones como: nombre, precio, marca de autos, stock,etc...
+Cada usuario podrá interactuar con los diferentes productos ofrecidos accediendo a una descripción completa del mismo, pudiendo seleccionar cuantas unidades desea y poder comprar el mismo.
+El servicio cuanta con una sección denominada "carrito" dónde podrá ver los diferentes productos seleccionados, la cantidad, el precio individual y la suma total de los productos.
+Al finalizar la compra recibirá un identificador con la orden de su compra.
 
 ### `npm start`
 

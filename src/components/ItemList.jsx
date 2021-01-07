@@ -35,7 +35,7 @@ const ItemList = () => {
                 {
                     items.map((product) => (
                         <div className={"col-6 col-md-4 p-3"}>
-                          <Item name={product.name} marca={product.brand} image={product.image} price={product.price} id={product.id} />
+                          <Item name={product.name} marca={product.brand} image={product.image} description={product.description}  price={product.price} id={product.id} />
                         </div>
                     ))
                 }

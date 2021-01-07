@@ -1,6 +1,7 @@
 import CountContainer from "../components/Containers/CountContainer";
 import React, {useContext, useState} from "react";
 import { Cart } from "../context/CartContext";
+import {Link} from "react-router-dom";
 
 
 const ItemDetail = (props) => {
@@ -19,7 +20,7 @@ const ItemDetail = (props) => {
                     <img src={props.producto.image} className={"w-100"} alt=""/>
                     <div className={"card-body"}>
                         <h3>{props.producto.name}</h3>
-                        <p className="card-text">{props.producto.descripcion}</p>
+                        <h2 className="card-title">Descripción: {props.producto.description}</h2>
                         <div className={"container text-center"}>
                             <div className={"mt-5"}>
                                 <CountContainer min={1} max={10} onChange={onChange}/>
